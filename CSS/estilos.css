@@ -1,0 +1,305 @@
+/* Codificación UTF-8, no funciona en Edge o IExplorer en alguna vers */
+@charset "UTF-8";
+
+/**** Quitar márgenes predefinidos ****/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* "box-sizing: border-box" >> Se usa para que un contenedor que ocupa un ancho, como el 100%, no sobrepase dicho ancho teniendo un padding de por ejemplo 5%, lo que daría 105% */
+}
+
+/********************** ESTILOS NORMALES GENERALES RESPONSIVE (ALL) ***********************/
+
+/*************** < -768PX	Por defecto para móviles(pantallas reducidas): ***************/
+/* Desde 767px hacia abajo hasta la anchura mínima, todas las demás resoluciones */
+/* En selector de body irán las propiedades 
+    por defecto para que las hereden otros tags */
+body {
+    font-family: "Tahoma", "Times New Roman";
+    font-size: 85%;
+}
+
+/* MENU */
+nav {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+}
+
+/****     ul#menu >> dentro de nav    ****/
+ul#menu {
+    list-style: none;
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+ul#menu li {
+    /* Hereda "font-family: Tahoma" del body css */
+    font-size: 115.5%;
+    padding: 5px 3.75% 4.5px 3.75%;
+}
+
+ul#menu li:hover {
+    border-bottom: 2px solid rgba(15, 15, 15, 0.8);
+}
+
+/* Desactivar "display: none" comentándolo para que se visualice logo en móviles, etc. */
+ul#menu li#logo {
+    display: none;
+}
+
+ul#menu li#logo:hover {
+    border-bottom: none;
+}
+
+ul#menu li#logo img {
+    height: 35px;
+    position: relative;
+    top: -80%;
+    left: 15px;
+}
+
+ul#menu a {
+    /* Hereda "font-size: 164.5%" del li css */
+    text-decoration: none;
+    color: #000;
+}
+
+/* CABECERA */
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2.85px solid #000;
+    margin: 10% 0 5% 0;
+    padding-bottom: 4%;
+}
+
+header h1 {
+    font-family: "Van Helsing", "Times New Roman";
+    font-size: 275%;
+    letter-spacing: 5.85px;
+}
+
+header #tituloh1 {
+    animation: latir 2.25s alternate infinite ease-in-out;
+}
+
+@keyframes latir {
+    from {
+        letter-spacing: 10px;
+        transform: scale(100%);
+    }
+
+    to {
+        letter-spacing: 15px;
+        transform: scale(110%);
+    }
+}
+
+/* PIE */
+footer {
+    /* margin-bottom temporal para poder visualizar hover en el diseño */
+    width: 100%;
+    padding: 20px 0;
+    border-top: 2.85px solid #000;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul#redsoc {
+    width: 50%;
+    height: 27px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul#redsoc li {
+    /* NO Hereda "font-family:" del body CSS. Span usa las fuentes Fontello importadas */
+    font-size: 120.25%;
+    padding: 0.25% 6.5%;
+}
+
+ul#redsoc li:hover {
+    border-bottom: 2px solid rgba(30, 30, 30, 0.7);
+}
+
+ul#redsoc a {
+    text-decoration: none;
+}
+
+ul#redsoc span {
+    padding: 0.25%;
+    border-radius: 4.5%;
+}
+
+ul#redsoc span.shadow {
+    padding: 3.5%;
+    box-shadow: 1px 1px 10px 3px rgba(40, 40, 40, 0.45);
+    opacity: 0.75;
+    border-radius: 5px;
+    transition: 0.45s ease-in-out;
+}
+
+ul#redsoc span.shadow:hover {
+    box-shadow: 0px 0px 10.5px 5px rgba(40, 40, 40, 0.45);
+    opacity: 1;
+}
+
+ul#redsoc span#facebook {
+    color: #395898;
+}
+
+ul#redsoc span#twitter {
+    color: #29A8DF;
+}
+
+ul#redsoc span#instagram {
+    color: #FDFDFA;
+    background: linear-gradient(195deg, #8341C2 10%, #C0308A 40%, #FABA52 85%);
+}
+
+ul#redsoc span#instagram:hover {
+    background: linear-gradient(173deg, #8341C2 10%, #C0308A 45%, #FABA52 80%);
+}
+
+ul#redsoc span#youtube {
+    color: #FF3D00;
+}
+
+/* CUERPO */
+main {}
+
+
+/************* > +768PX	Responsive para movil(horizontal) y tablet(vertical): *************/
+/* Desde 768px hasta 1024px de ancho */
+@media (min-width:768px) {
+
+    /* "@media()" >> media queries: Son elementos de código CSS para adaptar la visualización o renderización de la web a distintas pantallas de diferentes medios y tamaños */
+    body {
+        font-family: "Tahoma", "Times New Roman";
+        font-size: 92.5%;
+    }
+
+    /* MENU */
+    nav {}
+
+    /* "max-width" Sirve para establecer ancho máximo en pantallas de resolución muy alta */
+    /* "min-width" Sirve para establecer ancho mínimo en el caso opuesto */
+    ul#menu {
+        max-width: 800px;
+        height: 35px;
+    }
+
+    ul#menu li {
+        /* Hereda "font-family: Tahoma" del body css */
+        font-size: 148.15%;
+        padding: 5px 3.75% 5px 3.75%;
+    }
+
+    ul#menu li#logo {
+        display: block;
+        padding: 5px 0.15% 4.5px 0.15%;
+
+    }
+
+    ul#menu li#logo img {
+        height: 70px;
+        position: relative;
+        top: -80%;
+    }
+
+    /* CABECERA */
+    header {
+        border-bottom: 3.35px solid #000;
+    }
+
+    header h1 {
+        font-size: 335%;
+        letter-spacing: 6.7px;
+    }
+
+    /* PIE */
+    footer {
+        border-top: 3.35px solid #000;
+    }
+
+    footer ul#redsoc {
+        max-width: 800px;
+        height: 37px;
+    }
+
+    ul#redsoc li {
+        /* NO Hereda "font-family:" del body CSS. Span usa las fuentes Fontello importadas */
+        font-size: 137.75%;
+        padding: 1.1% 5.15%;
+    }
+
+    /* CUERPO */
+    main {}
+
+}
+
+
+/******************* > +1024PX	Responsive para escritorio-horizontal: *******************/
+/* Desde 1024px de ancho en adelante, altas resoluciones */
+@media (min-width:1024px) {
+    body {
+        font-family: "Tahoma", "Times New Roman";
+        font-size: 95%;
+    }
+
+    /* MENU */
+    /**/
+    /* "max-width" Sirve para establecer ancho máximo en pantallas de resolución muy alta */
+    /* "min-width" Sirve para establecer ancho mínimo en el caso opuesto */
+    ul#menu {
+        max-width: 1024px;
+        height: 38px;
+    }
+
+    ul#menu li {
+        /* Hereda "font-family: Tahoma" del body css */
+        font-size: 164.5%;
+        padding: 5px 3.75% 5px 3.75%;
+    }
+
+    ul#menu li#logo img {
+        height: 90px;
+        top: -100%;
+    }
+
+    /* CABECERA */
+    header {
+        border-bottom: 5px solid #000;
+    }
+
+    header h1 {
+        font-size: 500%;
+        letter-spacing: 10px;
+    }
+
+    /* PIE */
+    footer {
+        border-top: 5px solid #000;
+    }
+
+    footer ul#redsoc {
+        max-width: 1024px;
+        height: 45px;
+    }
+
+    ul#redsoc li {
+        /* NO Hereda "font-family:" del body CSS. Span usa las fuentes Fontello importadas */
+        font-size: 155.25%;
+        padding: 1.15% 3.75%;
+    }
+
+    /* CUERPO */
+    main {}
+
+}
