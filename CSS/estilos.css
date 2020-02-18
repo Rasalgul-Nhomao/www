@@ -1,4 +1,4 @@
-/* Codificación UTF-8, no funciona en Edge o IExplorer en alguna vers */
+﻿/* Codificación UTF-8, no funciona en Edge o IExplorer en alguna vers */
 @charset "UTF-8";
 
 /**** Quitar márgenes predefinidos ****/
@@ -300,6 +300,23 @@ main {}
     }
 
     /* CUERPO */
-    main {}
+    main h1 {
+            color: black;
+	    text-align: center;
+	}
 
-}
+
+    main p {
+            color: black;
+
+            }
+
+    div.index{ 
+         width: 500px;
+         margin: auto;
+                            
+
+        }
+
+
+
