@@ -172,7 +172,19 @@ ul#redsoc span#youtube {
 }
 
 /* CUERPO */
-main {}
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main .tiraImgs {
+    width: 25%;
+}
+
+main .tiraImgs img {
+    height: 175px;
+    margin: 20px 0;
+}
 
 
 /************* > +768PX	Responsive para movil(horizontal) y tablet(vertical): *************/
