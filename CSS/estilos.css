@@ -1,4 +1,4 @@
-﻿/* Codificación UTF-8, no funciona en Edge o IExplorer en alguna vers */
+/* Codificación UTF-8, no funciona en Edge o IExplorer en alguna vers */
 @charset "UTF-8";
 
 /**** Quitar márgenes predefinidos ****/
@@ -49,7 +49,7 @@ ul#menu li:hover {
 
 /* Desactivar "display: none" comentándolo para que se visualice logo en móviles, etc. */
 ul#menu li#logo {
-    display: none;
+    /*! display: none; */
 }
 
 ul#menu li#logo:hover {
@@ -172,18 +172,31 @@ ul#redsoc span#youtube {
 }
 
 /* CUERPO */
-main {
+main#photos {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-main .tiraImgs {
-    width: 25%;
+main#photos .tiraImgs {
+    width: 95.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.5%;
+    margin: 1.25% 0;
 }
 
-main .tiraImgs img {
-    height: 175px;
-    margin: 20px 0;
+main#photos .tiraImgs img {
+    width: 92.5%;
+    margin: 3.5% 0;
+    opacity: 0.85;
+    border-radius: 5px;
+}
+
+main#photos .tiraImgs img:hover {
+    opacity: 1;
 }
 
 
@@ -252,8 +265,14 @@ main .tiraImgs img {
     }
 
     /* CUERPO */
-    main {}
+    main#photos {
+        flex-direction: row;
+        align-items: baseline;
+    }
 
+    main#photos .tiraImgs {
+        width: 85.75%;
+    }
 }
 
 
@@ -313,22 +332,18 @@ main .tiraImgs img {
 
     /* CUERPO */
     main h1 {
-            color: black;
-	    text-align: center;
-	}
+        color: black;
+        text-align: center;
+    }
 
 
     main p {
-            color: black;
+        color: black;
 
-            }
+    }
 
-    div.index{ 
-         width: 500px;
-         margin: auto;
-                            
-
-        }
-
-
-
+    div.index {
+        width: 500px;
+        margin: auto;
+    }
+}
