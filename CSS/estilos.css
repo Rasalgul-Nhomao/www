@@ -336,11 +336,31 @@ main#photos .tiraImgs img:hover {
         text-align: center;
     }
 
-
     main p {
         color: black;
 
     }
+    
+    .biografia {
+            color: black;
+			text-align: justify
+            }
+
+    div.index{ 
+         width: 500px;
+         margin: auto;
+                            
+
+        }
+
+	.inicio{
+		
+		text-align: justify;
+
+	}
+	.primer{
+		text-align: justify;
+	}
 
     div.index {
         width: 500px;
