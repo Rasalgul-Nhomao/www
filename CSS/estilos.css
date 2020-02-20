@@ -306,9 +306,9 @@ main {}
 	}
 
 
-    main p {
+    .biografia {
             color: black;
-
+			text-align: justify
             }
 
     div.index{ 
@@ -318,5 +318,12 @@ main {}
 
         }
 
+	.inicio{
+		
+		text-align: justify;
 
+	}
+	.primer{
+		text-align: justify;
+	}
 
