@@ -16,7 +16,8 @@
 /* En selector de body irán las propiedades 
     por defecto para que las hereden otros tags */
 body {
-    font-family: "Tahoma", "Times New Roman";
+    font-family: "Times New Roman", "Van Helsing";
+    color: #333;
     font-size: 85%;
 }
 
@@ -66,7 +67,7 @@ ul#menu li#logo img {
 ul#menu a {
     /* Hereda "font-size: 164.5%" del li css */
     text-decoration: none;
-    color: #000;
+    color: #222;
 }
 
 /* CABECERA */
@@ -79,7 +80,7 @@ header {
 }
 
 header h1 {
-    font-family: "Van Helsing", "Times New Roman";
+    font-family: "Van Helsing";
     font-size: 275%;
     letter-spacing: 5.85px;
 }
@@ -199,6 +200,50 @@ main#photos .tiraImgs img:hover {
     opacity: 1;
 }
 
+main#table {
+    display: table;
+    width: 40%;
+    /* Para centrar el contenedor >> margin: 0 auto; */
+    margin: 0 auto;
+    padding: 1.5%;
+}
+
+main#table .tr:first-child h1 {
+    font-size: 225%;
+}
+
+main#table h1 {
+    font-family: "Van Helsing";
+    text-align: center;
+    font-size: 205%;
+    margin: 20px 0;
+    text-shadow: 3.5px 3.5px 5.5px;
+    letter-spacing: 3.5px;
+}
+
+main#table p {
+    font-size: 110%;
+    text-align: justify;
+    margin-bottom: 5.5%;
+}
+
+main .tr {
+    display: table-row;
+}
+
+main#table #imgBio {
+    width: 99.5%;
+    border-radius: 2.25%;
+    opacity: 0.98;
+}
+
+main#table #imgQBrecords {
+    float: right;
+    width: 194.92px;
+    shape-outside: margin-box;
+    border-radius: 20% 15.5% 37.5% 37.5%;
+    margin: 0 0.0125% 0.025% 0.5%;
+}
 
 /************* > +768PX	Responsive para movil(horizontal) y tablet(vertical): *************/
 /* Desde 768px hasta 1024px de ancho */
@@ -206,7 +251,6 @@ main#photos .tiraImgs img:hover {
 
     /* "@media()" >> media queries: Son elementos de código CSS para adaptar la visualización o renderización de la web a distintas pantallas de diferentes medios y tamaños */
     body {
-        font-family: "Tahoma", "Times New Roman";
         font-size: 92.5%;
     }
 
@@ -280,7 +324,6 @@ main#photos .tiraImgs img:hover {
 /* Desde 1024px de ancho en adelante, altas resoluciones */
 @media (min-width:1024px) {
     body {
-        font-family: "Tahoma", "Times New Roman";
         font-size: 95%;
     }
 
@@ -294,7 +337,7 @@ main#photos .tiraImgs img:hover {
     }
 
     ul#menu li {
-        /* Hereda "font-family: Tahoma" del body css */
+        /* Hereda "font-family: Times New Roman" del body css */
         font-size: 164.5%;
         padding: 5px 3.75% 5px 3.75%;
     }
@@ -331,39 +374,7 @@ main#photos .tiraImgs img:hover {
     }
 
     /* CUERPO */
-    main h1 {
-        color: black;
-        text-align: center;
-    }
 
-    main p {
-        color: black;
+    main#table {}
 
-    }
-    
-    .biografia {
-            color: black;
-			text-align: justify
-            }
-
-    div.index{ 
-         width: 500px;
-         margin: auto;
-                            
-
-        }
-
-	.inicio{
-		
-		text-align: justify;
-
-	}
-	.primer{
-		text-align: justify;
-	}
-
-    div.index {
-        width: 500px;
-        margin: auto;
-    }
 }
