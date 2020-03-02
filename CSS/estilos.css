@@ -9,14 +9,14 @@
     /* "box-sizing: border-box" >> Se usa para que un contenedor que ocupa un ancho, como el 100%, no sobrepase dicho ancho teniendo un padding de por ejemplo 5%, lo que daría 105% */
 }
 
-/********************** ESTILOS NORMALES GENERALES RESPONSIVE (ALL) ***********************/
+/********************* ESTILOS NORMALES GENERALES RESPONSIVE (TODAS) **********************/
 
 /*************** < -768PX	Por defecto para móviles(pantallas reducidas): ***************/
 /* Desde 767px hacia abajo hasta la anchura mínima, todas las demás resoluciones */
 /* En selector de body irán las propiedades 
     por defecto para que las hereden otros tags */
 body {
-    font-family: "Times New Roman", "Van Helsing";
+    font-family: "Times New Roman", 'Van Helsing';
     color: #333;
     font-size: 85%;
 }
@@ -39,8 +39,8 @@ ul#menu {
 }
 
 ul#menu li {
-    /* Hereda "font-family: Tahoma" del body css */
-    font-size: 115.5%;
+    font-family: 'RobotoSlab-Light';
+    font-size: 112.5%;
     padding: 5px 3.75% 4.5px 3.75%;
 }
 
@@ -74,8 +74,8 @@ ul#menu a {
 header {
     display: flex;
     justify-content: center;
-    border-bottom: 2.85px solid #000;
-    margin: 10% 0 5% 0;
+    border-bottom: 2.85px solid #222;
+    margin: 3.5% 0 3.5% 0;
     padding-bottom: 4%;
 }
 
@@ -87,6 +87,7 @@ header h1 {
 
 header #tituloh1 {
     animation: latir 2.25s alternate infinite ease-in-out;
+    color: #111;
 }
 
 @keyframes latir {
@@ -106,7 +107,7 @@ footer {
     /* margin-bottom temporal para poder visualizar hover en el diseño */
     width: 100%;
     padding: 20px 0;
-    border-top: 2.85px solid #000;
+    border-top: 2.85px solid #222;
     display: flex;
     justify-content: center;
 }
@@ -173,6 +174,67 @@ ul#redsoc span#youtube {
 }
 
 /* CUERPO */
+/*             Inicio - Home     */
+main#table {
+    /* Para mostrar divs que actuan como tablas >> display: table */
+    display: table;
+    width: 75.95%;
+    /* Para centrar el contenedor >> margin: 0 auto >> eje horizontal centra con auto; */
+    margin: 0 auto;
+    padding: 1.5%;
+}
+
+main .tr {
+    /* Inserta div que se comporta como fila en tabla div de arriba. >> display: row */
+    display: table-row;
+}
+
+main #tr-flex {
+    /* id="tr-flex" >> Segun tamaño responsive, es un div tipo fila o es flexbox d column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .td {
+    /* div que se comporta como una celda / td >> display: table-cell. */
+    display: table-cell;
+}
+
+main#table .tr:first-child h1 {
+    font-size: 187.95%;
+}
+
+main#table h1 {
+    font-family: "Van Helsing";
+    font-size: 185.95%;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 3.5px;
+    text-shadow: 3.5px 3.5px 5.5px;
+}
+
+main#table p {
+    font-size: 87.85%;
+    font-family: 'RobotoSlab-Regular';
+    margin-bottom: 5.5%;
+    text-align: justify;
+}
+
+main#table #imgBio {
+    width: 99.5%;
+    border-radius: 2.25%;
+    opacity: 0.95;
+}
+
+main#table #imgQBrecords {
+    clear: both;
+    width: 75.85%;
+    border-radius: 20% 15.5% 37.5% 37.5%;
+    margin: 0.085% 0;
+}
+
+/*             - Fotos -     */
 main#photos {
     display: flex;
     flex-direction: column;
@@ -200,50 +262,6 @@ main#photos .tiraImgs img:hover {
     opacity: 1;
 }
 
-main#table {
-    display: table;
-    width: 40%;
-    /* Para centrar el contenedor >> margin: 0 auto; */
-    margin: 0 auto;
-    padding: 1.5%;
-}
-
-main#table .tr:first-child h1 {
-    font-size: 225%;
-}
-
-main#table h1 {
-    font-family: "Van Helsing";
-    text-align: center;
-    font-size: 205%;
-    margin: 20px 0;
-    text-shadow: 3.5px 3.5px 5.5px;
-    letter-spacing: 3.5px;
-}
-
-main#table p {
-    font-size: 110%;
-    text-align: justify;
-    margin-bottom: 5.5%;
-}
-
-main .tr {
-    display: table-row;
-}
-
-main#table #imgBio {
-    width: 99.5%;
-    border-radius: 2.25%;
-    opacity: 0.98;
-}
-
-main#table #imgQBrecords {
-    float: right;
-    width: 194.92px;
-    shape-outside: margin-box;
-    border-radius: 20% 15.5% 37.5% 37.5%;
-    margin: 0 0.0125% 0.025% 0.5%;
-}
 
 /************* > +768PX	Responsive para movil(horizontal) y tablet(vertical): *************/
 /* Desde 768px hasta 1024px de ancho */
@@ -266,7 +284,7 @@ main#table #imgQBrecords {
 
     ul#menu li {
         /* Hereda "font-family: Tahoma" del body css */
-        font-size: 148.15%;
+        font-size: 145.15%;
         padding: 5px 3.75% 5px 3.75%;
     }
 
@@ -284,7 +302,7 @@ main#table #imgQBrecords {
 
     /* CABECERA */
     header {
-        border-bottom: 3.35px solid #000;
+        border-bottom: 3.35px solid #222;
     }
 
     header h1 {
@@ -294,7 +312,7 @@ main#table #imgQBrecords {
 
     /* PIE */
     footer {
-        border-top: 3.35px solid #000;
+        border-top: 3.35px solid #222;
     }
 
     footer ul#redsoc {
@@ -309,6 +327,49 @@ main#table #imgQBrecords {
     }
 
     /* CUERPO */
+    /*         Inicio - Home     */
+    main#table {
+        width: 41.75%;
+    }
+
+    main #tr-flex {
+        display: table-row;
+    }
+
+    main#table .tr:first-child h1 {
+        font-size: 195.85%;
+    }
+
+    main#table h1 {
+        font-size: 195.5%;
+    }
+
+    main#table p {
+        font-size: 89.95%;
+    }
+
+    main#table #imgQBrecords {
+        width: 39.109%;
+        float: right;
+        shape-outside: margin-box;
+        margin: 0.0025% 0.005% 0 0.5%;
+    }
+
+    /*
+* shape-outside >> Sirve para permitir que el texto que rodea a una imagen o contenedor pueda rodearlo con su forma, ya sea circular, oval o con diversas formas. Dicha propiedad se aplica sobre la imagen o contenedor div, no sobre el texto que la rodea.
+    >> Propiedades valor: 
+        * margin-box: Toma como referencia las formas a partir del margen externo.
+        * border-box: Hace lo mismo pero a partir del borde externo, lo cual lo junta mas.
+        * content-box: Igual pero a partir de su contenido, con lo cual aun queda mas junto.
+        * url(<urlimage>): Toma como referencia para las formas la imagen transparente hasta llegar a su contenido y sobrepasando las transparencias. También con imagen sin.
+        * circle(), ellipse(), polygon() >> Formas personalizadas con funciones & coordens.
+    
+* shape-image-threshold. Permite definir a partir de cuándo se entiende que sebe      adaptarse la imagen, ajustando a la transparencia. 0.5 indica que el límite para adaptar el texto será cuando la transparencia sea del 50%.
+    
+* shape-margin. Sirve para provocar un espaciado entre la forma y los elementos que se coloquen al lado.
+*/
+
+    /*         - Fotos -     */
     main#photos {
         flex-direction: row;
         align-items: baseline;
@@ -317,6 +378,8 @@ main#table #imgQBrecords {
     main#photos .tiraImgs {
         width: 33.33%;
     }
+
+
 }
 
 
@@ -338,7 +401,7 @@ main#table #imgQBrecords {
 
     ul#menu li {
         /* Hereda "font-family: Times New Roman" del body css */
-        font-size: 164.5%;
+        font-size: 160.5%;
         padding: 5px 3.75% 5px 3.75%;
     }
 
@@ -349,7 +412,7 @@ main#table #imgQBrecords {
 
     /* CABECERA */
     header {
-        border-bottom: 5px solid #000;
+        border-bottom: 5px solid #222;
     }
 
     header h1 {
@@ -359,7 +422,7 @@ main#table #imgQBrecords {
 
     /* PIE */
     footer {
-        border-top: 5px solid #000;
+        border-top: 5px solid #222;
     }
 
     footer ul#redsoc {
@@ -374,7 +437,22 @@ main#table #imgQBrecords {
     }
 
     /* CUERPO */
+    /*         Inicio - Home     */
+    main#table {
+        width: 43.5%;
+    }
 
-    main#table {}
+    main#table .tr:first-child h1 {
+        font-size: 225%;
+    }
+
+    main#table h1 {
+        font-size: 205%;
+    }
+
+    main#table p {
+        font-size: 95.5%;
+    }
+
 
 }

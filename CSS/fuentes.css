@@ -72,4 +72,28 @@
     src: url('../fonts/vanhelsing.ttf');
 }
 
+    /* Importación de fuente RobotoSlab-Light */
+@font-face {
+    font-family: 'RobotoSlab-Light';
+    src: url('../fonts/RobotoSlab-Light.ttf');
+}
+
+    /* Importación de fuente RobotoSlab-Regular */
+@font-face {
+    font-family: 'RobotoSlab-Regular';
+    src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+
+    /* Importación de fuente RobotoSlab-Thin */
+@font-face {
+    font-family: 'RobotoSlab-Thin';
+    src: url('../fonts/RobotoSlab-Thin.ttf');
+}
+
+    /* Importación de fuente RobotoSlab-Bold */
+@font-face {
+    font-family: 'RobotoSlab-Bold';
+    src: url('../fonts/RobotoSlab-Bold.ttf');
+}
+
 /******************************* OTRAS FUENTES FIN *******************************/
