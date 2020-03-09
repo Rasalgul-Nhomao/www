@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
     <!-- Cargamos fichero que importa las fuentes de la carpeta fonts -->
     <link rel="stylesheet" type="text/css" href="CSS/fuentes.css">
+    <!-- Cargamos fichero que importa el icono favicon -->
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
 </head>
 
 <body>
@@ -52,7 +54,22 @@
     </header>
 
     <!-- CUERPO -->
-    <main>
+    <main id="contacto">
+
+        <form action="php/recibe_form.php" method="post">
+            <legend> CONTACTO </legend>
+            <label for="Nombre">Nombre <span class="obligatorio">*</span></label>
+            <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
+            <input type="text" name="nombre" minlength="2" maxlength="30" placeholder="Nombre (obligatorio)" required>
+            <input type="text" name="apellidos" maxlength="70" placeholder="Apellidos (obligatorio)" required>
+            <label for="email">E-mail <span class="obligatorio">*</span></label>
+            <label for="asunto">Asunto</label>
+            <input type="email" name="email" placeholder="Introduce e-mail válido (obligatorio)" required>
+            <input type="text" name="asunto" minlength="15" maxlength="30" placeholder="Asunto breve (entre 15 y 30 caracteres)">
+            <label for="mensaje">Mensaje<span class="obligatorio">*</span></label>
+            <textarea name="mensaje" cols="22" rows="10" maxlength="300" placeholder="Coméntanos tu solicitud en detalle (obligatorio)" required></textarea>
+            <input type="submit" value="ENVIAR">
+        </form>
 
     </main>
 

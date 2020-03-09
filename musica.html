@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
     <!-- Cargamos fichero que importa las fuentes de la carpeta fonts -->
     <link rel="stylesheet" type="text/css" href="CSS/fuentes.css">
+    <!-- Cargamos fichero que importa el icono favicon -->
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
 </head>
 
 <body>
@@ -52,7 +54,104 @@
     </header>
 
     <!-- CUERPO -->
-    <main>
+    <main id="music">
+        <span class="TextSeccion">DISCOGRAFÍA</span>
+        <table class="tablamusica">
+
+            <thead>
+                <tr>
+                    <td>
+                        <img class="imagendisco" src="imagenes/news of the world.jpg" usemap="#newsmap">
+                    </td>
+
+                    <td>
+                        <a name="notw">
+                            <audio controls>
+                                <source src="musicas/queen-news-of-the-world-full-album.ogg" type="audio/ogg">
+
+                                <source src="musicas/queen-news-of-the-world-full-album.mp3" type="audio/mpeg"> Tu navegador no implementa el elemento audio.
+                            </audio>
+                        </a>
+                        <table class="anidada">
+                            <tbody>
+                                <tr>
+                                    <td>Año</td>
+                                    <td>1977</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </thead>
+
+            <tfoot>
+                <tr>
+                    <td>
+                        <img class="imagendisco" src="imagenes/jazz.jpg">
+                    </td>
+                    <td>
+                        <a name="jazz">
+                            <audio controls>
+                                <source src="musicas/jazz-1978.ogg" type="audio/ogg">
+                                <source src="musicas/jazz-1978.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                            </audio>
+                        </a>
+                        <table class="anidada">
+                            <tbody>
+                                <tr>
+                                    <td>Año</td>
+                                    <td>1978</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+
+                </tr>
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <img class="imagendisco" src="imagenes/the game.jpg">
+                    </td>
+
+                    <td>
+                        <a name="thg">
+                            <audio controls>
+                                <source src="musicas/the-game-1980.ogg" type="audio/ogg">
+                                <source src="musicas/the-game-1980.mp3" type="audio/mpeg"> Tu navegador no implementa el elemento audio.
+                            </audio>
+                        </a>
+                        <table class="anidada">
+                            <tbody>
+                                <tr>
+                                    <td>Año</td>
+                                    <td>1980</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <figure>
+            <figcaption>
+                <h1>Compra y escucha sus Álbums !</h1>
+            </figcaption>
+            <img src="imagenes/mosaico.png" usemap="#mapeo" />
+            <map name="mapeo">
+                <area shape="poly" coords="12,44,18,33,204,15,215,21,234,195,31,220" href="#notw" alt="escuchar álbum News Of The World" title="News Of The World" style="outline:none;" />
+                <area shape="poly" coords="10,223,129,214,255,203,260,220,149,231,15,247" href="https://www.last.fm/es/music/Queen/News+Of+The+World" alt="Compra de álbum News Of The World" title="Comprar !!" target="_blank" style="outline:none;" />
+
+                <area shape="poly" coords="279,193,298,29,307,20,484,37,489,45,473,217,374,208" href="#thg" alt="escuchar álbum The Game !!" title="The Game" style="outline:none;" />
+                <area shape="poly" coords="287,202,286,216,346,231,401,235,465,244,472,225,384,211,331,205" href="https://www.last.fm/es/music/Queen/The+Game+(2011+Remaster)" alt="comprar álbum The Game !!" title="Comprar !!" target="_blank" style="outline:none;" />
+
+                <area shape="poly" coords="336,270,347,316,350,367,347,396,323,401,292,406,246,413,228,416,227,427,229,451,161,443,158,437,155,379,158,328,161,292,162,273,164,267,232,261,274,259" href="#jazz" alt="escuchar álbum Jazz" title="Jazz" style="outline:none;" />
+                <area shape="poly" coords="233,424,234,437,238,450,251,454,306,450,333,444,343,439,352,431,368,428,411,416,427,408,424,392,423,389,418,387,339,404" href="https://www.last.fm/es/music/Queen/Jazz+(2011+Remaster)" alt="comprar álbum Jazz" title="Comprar !!" target="_blank" style="outline:none;" />
+            </map>
+        </figure>
 
     </main>
 
